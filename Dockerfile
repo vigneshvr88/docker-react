@@ -12,6 +12,7 @@ RUN npm run build
 
 #Deploy and start the applicatio in nginx
 FROM nginx
+EXPOSE 80
 COPY --from=build-stage /app/build/ /usr/share/nginx/html
 
 
